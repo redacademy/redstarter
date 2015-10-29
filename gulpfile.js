@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
     jscs = require('gulp-jscs'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    browserSync = require('browser-sync');
 
 var plumberErrorHandler = {
    errorHandler: notify.onError({
@@ -49,9 +50,22 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('watch', function() {
-   gulp.watch('sass/*.scss', ['sass']);
-   gulp.watch('js/*.js', ['scripts']);
+gulp.task('browser-sync', function() {
+   var files = [
+      './sass/*.scss',
+      './js/*.js',
+      './*.php',
+      './**/*.php',
+   ];
+
+    browserSync.init(files, {
+        proxy: 'localhost/redstarter/',
+    });
 });
 
-gulp.task('default', ['sass', 'scripts']);
+gulp.task('watch', function() {
+   gulp.watch('./sass/*.scss', ['sass']);
+   gulp.watch('./js/*.js', ['scripts']);
+});
+
+gulp.task('default', ['watch', 'browser-sync']);
