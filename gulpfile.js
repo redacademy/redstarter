@@ -4,10 +4,11 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    minifyCSS = require('gulp-minify-css'),
+    cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     jscs = require('gulp-jscs'),
     jshint = require('gulp-jshint'),
+    stylish = require('jshint-stylish'),
     browserSync = require('browser-sync');
 
 var plumberErrorHandler = {
@@ -25,7 +26,7 @@ gulp.task('sass', function() {
          browsers: ['last 2 versions']
       }))
       .pipe(gulp.dest('./'))
-      .pipe(minifyCSS())
+      .pipe(cleanCSS())
       .pipe(rename('style.min.css'))
       .pipe(gulp.dest('./build/css'));
 });
@@ -47,7 +48,7 @@ gulp.task('jscs', function () {
 gulp.task('lint', function() {
   return gulp.src('./js/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'));
+    .pipe(jshint.reporter(stylish));
 });
 
 gulp.task('browser-sync', function() {
@@ -59,7 +60,7 @@ gulp.task('browser-sync', function() {
    ];
 
     browserSync.init(files, {
-        proxy: 'localhost/redstarter/',
+        proxy: 'redstarter.dev',
     });
 });
 
