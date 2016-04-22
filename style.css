@@ -300,9 +300,7 @@ body {
 
 blockquote, q {
   quotes: "" ""; }
-  blockquote:before,
-  blockquote:after, q:before,
-  q:after {
+  blockquote:before, blockquote:after, q:before, q:after {
     content: ""; }
 
 hr {
@@ -358,7 +356,7 @@ input[type="submit"] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
+  padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
   button:hover,
   input[type="button"]:hover,
@@ -366,8 +364,7 @@ input[type="submit"] {
   input[type="submit"]:hover {
     border-color: #ccc #bbb #aaa;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active,
-  button:focus,
+  button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
   input[type="reset"]:active,
@@ -414,14 +411,11 @@ a {
   color: royalblue; }
   a:visited {
     color: purple; }
-  a:hover,
-  a:focus,
-  a:active {
+  a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {
     outline: thin dotted; }
-  a:hover,
-  a:active {
+  a:hover, a:active {
     outline: 0; }
 
 /* Menus */
@@ -471,9 +465,9 @@ a {
   .main-navigation ul {
     display: block; } }
 
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 

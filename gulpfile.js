@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    cleanCSS = require('gulp-clean-css'),
+    cssnano = require('gulp-cssnano'),
     uglify = require('gulp-uglify'),
     jscs = require('gulp-jscs'),
     jshint = require('gulp-jshint'),
@@ -26,7 +26,7 @@ gulp.task('sass', function() {
          browsers: ['last 2 versions']
       }))
       .pipe(gulp.dest('./'))
-      .pipe(cleanCSS())
+      .pipe(cssnano())
       .pipe(rename('style.min.css'))
       .pipe(gulp.dest('./build/css'));
 });
