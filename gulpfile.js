@@ -53,15 +53,17 @@ gulp.task('lint', function() {
 
 gulp.task('browser-sync', function() {
    var files = [
-      './sass/*.scss',
-      './js/*.js',
+      './build/css/*.css',
+      './build/js/*.js',
       './*.php',
       './**/*.php',
    ];
 
     browserSync.init(files, {
-        proxy: 'redstarter.dev',
+        proxy: 'inhabitent.dev',
     });
+
+    gulp.watch(files).on('change', browserSync.reload);
 });
 
 gulp.task('watch', function() {
