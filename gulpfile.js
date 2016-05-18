@@ -1,3 +1,6 @@
+// make Browersync work with old version of Node
+require('es6-promise').polyfill();
+
 var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
