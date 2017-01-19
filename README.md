@@ -2,8 +2,6 @@
 
 A WordPress starter theme for RED Academy students, forked from Underscores.
 
-Download me, add me to your `wp-content` directory, rename me, and start themin'!
-
 ## Installation
 
 ### 1. Download me (don't clone me!)
