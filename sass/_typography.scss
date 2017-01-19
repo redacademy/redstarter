@@ -42,10 +42,10 @@ pre {
 	font-family: $font__pre;
 	@include font-size(0.9375);
 	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
+	margin-bottom: 1.6rem;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1.6rem;
 }
 
 code, kbd, tt, var {

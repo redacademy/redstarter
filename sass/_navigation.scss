@@ -43,11 +43,11 @@ a {
 			float: left;
 			position: absolute;
 			top: $base__space-unit;
-			left: -999em;
+			left: -999rem;
 			z-index: 99999;
 
 			ul {
-				left: -999em;
+				left: -999rem;
 				top: 0;
 			}
 
@@ -101,7 +101,7 @@ a {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}

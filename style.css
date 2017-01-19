@@ -242,16 +242,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Copy */
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5rem; }
 
 dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em; }
+  margin: 0 1.5rem; }
 
 address {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5rem; }
 
 pre {
   background: #eee;
@@ -259,10 +259,10 @@ pre {
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
-  margin-bottom: 1.6em;
+  margin-bottom: 1.6rem;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em; }
+  padding: 1.6rem; }
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -307,10 +307,10 @@ hr {
   background-color: #ccc;
   border: 0;
   height: 1px;
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5rem; }
 
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 1.5rem 3rem; }
 
 ul {
   list-style: disc; }
@@ -321,13 +321,13 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: 1.5rem; }
 
 dt {
   font-weight: bold; }
 
 dd {
-  margin: 0 1.5em 1.5em; }
+  margin: 0 1.5rem 1.5rem; }
 
 img {
   height: auto;
@@ -336,7 +336,7 @@ img {
   /* Adhere to container width. */ }
 
 table {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
   width: 100%; }
 
 /*--------------------------------------------------------------
@@ -356,7 +356,7 @@ input[type="submit"] {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .6em 1em .4em;
+  padding: .6rem 1rem .4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
   button:hover,
   input[type="button"]:hover,
@@ -433,11 +433,11 @@ a {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
-      top: 1.5em;
-      left: -999em;
+      top: 1.5rem;
+      left: -999rem;
       z-index: 99999; }
       .main-navigation ul ul ul {
-        left: -999em;
+        left: -999rem;
         top: 0; }
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
@@ -459,7 +459,7 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -468,7 +468,7 @@ a {
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
   overflow: hidden; }
 
 .comment-navigation .nav-previous,
@@ -520,12 +520,12 @@ a {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em; }
+  margin-right: 1.5rem; }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em; }
+  margin-left: 1.5rem; }
 
 .aligncenter {
   clear: both;
@@ -545,7 +545,7 @@ a {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.5rem;
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
@@ -562,7 +562,7 @@ a {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5rem; }
 
 .updated:not(.published) {
   display: none; }
@@ -574,11 +574,11 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1.5rem 0 0; }
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5rem; }
 
 /* Asides */
 .blog .format-aside .entry-title,
@@ -611,21 +611,21 @@ object {
 
 /* Captions */
 .wp-caption {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
   max-width: 100%; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
     margin-left: auto;
     margin-right: auto; }
   .wp-caption .wp-caption-text {
-    margin: 0.8075em 0; }
+    margin: 0.8075rem 0; }
 
 .wp-caption-text {
   text-align: center; }
 
 /* Galleries*/
 .gallery {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5rem; }
 
 .gallery-item {
   display: inline-block;
