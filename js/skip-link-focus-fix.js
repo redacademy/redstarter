@@ -3,7 +3,7 @@
  *
  * Helps with accessibility for keyboard only users.
  *
- * Learn more: https://github.com/Automattic/RED Starter Theme/pull/136
+ * Learn more: https://github.com/Automattic/_s/pull/136
  */
 (function () {
 	var isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
