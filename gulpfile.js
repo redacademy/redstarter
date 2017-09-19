@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    notify = require('gulp-notify'),
+    prettyError = require('gulp-prettyerror'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -10,16 +9,9 @@ var gulp = require('gulp'),
     eslint = require('gulp-eslint'),
     browserSync = require('browser-sync');
 
-var plumberErrorHandler = {
-    errorHandler: notify.onError({
-        title: 'Gulp',
-        message: 'Error: <%= error.message %>'
-    })
-};
-
 gulp.task('sass', function () {
     gulp.src('./sass/style.scss')
-        .pipe(plumber(plumberErrorHandler))
+        .pipe(prettyError())
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer({
