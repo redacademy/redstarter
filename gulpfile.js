@@ -1,18 +1,21 @@
+const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const browserSync = require('browser-sync');
+const cssnano = require('gulp-cssnano');
+const eslint = require('gulp-eslint');
 const gulp = require('gulp');
 const prettyError = require('gulp-prettyerror');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
-const cssnano = require('gulp-cssnano');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
-const eslint = require('gulp-eslint');
-const browserSync = require('browser-sync');
 
 // Create basic Gulp tasks
 
 gulp.task('sass', function() {
   return gulp
     .src('./sass/style.scss', { sourcemaps: true })
+    .pipe(sourcemaps.init())
     .pipe(prettyError())
     .pipe(sass())
     .pipe(
@@ -23,6 +26,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./'))
     .pipe(cssnano())
     .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('./build/css'));
 });
 
@@ -40,6 +44,11 @@ gulp.task(
   gulp.series('lint', function() {
     return gulp
       .src('./js/*.js')
+      .pipe(
+        babel({
+          presets: ['@babel/env']
+        })
+      )
       .pipe(uglify())
       .pipe(
         rename({
