@@ -1,5 +1,4 @@
 const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
 const browserSync = require('browser-sync');
 const cssnano = require('gulp-cssnano');
 const eslint = require('gulp-eslint');
@@ -8,7 +7,7 @@ const prettyError = require('gulp-prettyerror');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 
 // Create basic Gulp tasks
 
@@ -44,12 +43,7 @@ gulp.task(
   gulp.series('lint', function() {
     return gulp
       .src('./js/*.js')
-      .pipe(
-        babel({
-          presets: ['@babel/env']
-        })
-      )
-      .pipe(uglify())
+      .pipe(terser())
       .pipe(
         rename({
           extname: '.min.js'
