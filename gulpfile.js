@@ -8,6 +8,7 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const terser = require('gulp-terser');
+const babel = require('gulp-babel');
 
 // Create basic Gulp tasks
 
@@ -43,6 +44,11 @@ gulp.task(
   gulp.series('lint', function() {
     return gulp
       .src('./js/*.js')
+      .pipe(
+        babel({
+          presets: ['env']
+        })
+      )
       .pipe(terser())
       .pipe(
         rename({
