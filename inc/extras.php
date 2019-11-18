@@ -17,6 +17,11 @@ function red_starter_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_singular( 'page' ) ) {
+		global $post;
+		$classes[] = 'page-' . $post->post_name;
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
