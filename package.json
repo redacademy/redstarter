@@ -2,6 +2,7 @@
   "name": "redstarter",
   "version": "1.1.0",
   "description": "A starter theme for RED students, based on Underscores.",
+  "author": "yourname",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -22,13 +23,15 @@
     "singleQuote": true
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "sass": "gulp sass",
+    "scripts": "gulp scripts",
+    "build": "echo 'start build script' ; gulp scripts ; gulp sass ; echo 'end build script'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/redacademy/redstarter.git"
   },
-  "author": "redacademy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/redacademy/redstarter/issues"
