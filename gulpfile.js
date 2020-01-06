@@ -41,7 +41,7 @@ gulp.task('lint', function() {
 
 gulp.task(
   'scripts',
-  gulp.series('lint', function() {
+  gulp.series('lint', function compileScripts() {
     return gulp
       .src('./js/*.js')
       .pipe(
